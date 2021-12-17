@@ -1251,6 +1251,7 @@ public static <E extends Enum<E>> Map<String, E> getEnumMap(final Class<E> enumC
 ## Others
 
 ### sorted
+
 Sort map based on its values.
 
 ```java
