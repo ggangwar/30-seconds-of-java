@@ -1248,6 +1248,19 @@ public static <E extends Enum<E>> Map<String, E> getEnumMap(final Class<E> enumC
 }
 ```
 
+## Others
+
+### sorted
+Sort map based on its values.
+
+```java
+Map<Integer, String> sortedMap = 
+     unsortedMap.entrySet().stream()
+    .sorted(Entry.comparingByValue())
+    .collect(Collectors.toMap(Entry::getKey, Entry::getValue,
+                              (e1, e2) -> e1, LinkedHashMap::new));
+```
+
 ## In News
 
 1. Jetbrains Java Annotated Monthly covered little-java-functions in their [January newsletter](https://blog.jetbrains.com/idea/2018/01/java-annotated-monthly-january-2018/).
